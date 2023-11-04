@@ -1,4 +1,4 @@
-from fastapi import Depends, FastAPI, APIRouter
+from fastapi import APIRouter
 from crud import read_user
 
 router = APIRouter()
@@ -16,7 +16,7 @@ async def create_user(user_create: read_user.User):
     return read_user.create_user(user_create)
 
 @router.put("/users/{user_id}") # userを更新する
-async def update_user(user_id: int, user_create: create_user.User):
+async def update_user(user_id: int, user_create: read_user.User):
     return read_user.update_user(user_id, user_create)
 
 @router.delete("/users/{user_id}") # userを更新する

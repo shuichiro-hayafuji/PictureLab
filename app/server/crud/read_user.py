@@ -1,8 +1,7 @@
-import uvicorn
 from fastapi import Depends, FastAPI, APIRouter
 from sqlalchemy.orm import Session, sessionmaker
 from pydantic import BaseModel
-from database import SessionLocal
+from database.database import SessionLocal
 
 router = APIRouter()
 
