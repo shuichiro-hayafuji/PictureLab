@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from crud import read_user
+from app.server.crud import read_user
 
 router = APIRouter()
 
