@@ -3,6 +3,6 @@ services:
   server:
     build:
       context: .
-      dockerfile: app/Dockerfile
+      dockerfile: app/server/Dockerfile
     ports: 
       - 3000:3000

@@ -1,2 +1,2 @@
 # 仮想環境は無視する
-./plenv
+./app/server/venv

@@ -14,8 +14,8 @@ ENV PYTHONUNBUFFERED=1
 # COPY app/requirements.txt /app/
 COPY . .
 # 依存関係のインストール
-RUN pip3 install -r app/requirements.txt
+RUN pip3 install -r requirements.txt
 ENV PATH=$PATH:/root/.local/bin
 # コンテナ起動時にuvicornを使用してFastAPIアプリケーションを起動
-CMD ["uvicorn", "app.server.main:app", "--host", "0.0.0.0", "--port", "3000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "3000"]
 EXPOSE 3000
